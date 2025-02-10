@@ -99,7 +99,7 @@ export function InputSelect<TItem>({
           const allEmployeesItem = { label: "All Employees", value: "all" }
           const allItems = [allEmployeesItem, ...items];
 
-          return allitems.map((item, index) => {
+          return allItems.map((item, index) => {
             const parsedItem = parseItem(item)
             return (
               <div
