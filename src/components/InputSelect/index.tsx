@@ -20,12 +20,17 @@ export function InputSelect<TItem>({
       if (selectedItem === null) {
         return
       }
+      
+  if (selectedItem.value === "all") { //see if "all employee" is selected
+      setSelectedValue(null); 
+    } else {
+      setSelectedValue(selectedItem);
+    }
 
-      consumerOnChange(selectedItem)
-      setSelectedValue(selectedItem)
-    },
-    [consumerOnChange]
-  )
+    consumerOnChange(selectedItem);
+  },
+  [consumerOnChange]
+)
 
   return (
     <Downshift<TItem>
