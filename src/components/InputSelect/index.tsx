@@ -13,10 +13,7 @@ export function InputSelect<TItem>({
   loadingLabel,
 }: InputSelectProps<TItem>) {
   const [selectedValue, setSelectedValue] = useState<TItem | null>(defaultValue ?? null)
-  const [dropdownPosition, setDropdownPosition] = useState<DropdownPosition>({
-    top: 0,
-    left: 0,
-  })
+  const [dropdownPosition, setDropdownPosition] = useState<DropdownPosition  | null>(null);
 
   const onChange = useCallback<InputSelectOnChange<TItem>>(
     (selectedItem) => {
