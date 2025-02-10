@@ -96,8 +96,10 @@ export function InputSelect<TItem>({
           if (items.length === 0) {
             return <div className="RampInputSelect--dropdown-item">No items</div>
           }
+          const allEmployeesItem = { label: "All Employees", value: "all" }
+          const allItems = [allEmployeesItem, ...items];
 
-          return items.map((item, index) => {
+          return allitems.map((item, index) => {
             const parsedItem = parseItem(item)
             return (
               <div
